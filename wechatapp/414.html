@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>4A4</title>
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript">
+			var cards = [1,2,3,4,5,6,7,8,9,10,11,12,13,
+						14,15,16,17,18,19,20,21,22,23,24,25,26,
+						27,28,29,30,31,32,33,34,35,36,37,38,39,
+						40,41,42,43,44,45,46,47,48,49,50,51,52,53,54];
+			function getRandNumber(arr,len){
+				var index,value,median;
+				if(arr==null||len==0)return;
+				for (index = 0; index < len; index++) {
+					value = index + Math.random() % (len-index);
+					median = arr[index];
+					arr[index] = arr[value];
+					arr[value] = median;
+				}
+				//return arr;
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

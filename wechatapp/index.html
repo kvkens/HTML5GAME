@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>登录页面</title>
+		<link rel="stylesheet" href="http://cdn09.ehaier.com/v5/css/base.css" type="text/css" media="all" />
+		<style type="text/css">
+			.nav{
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="nav">
+			<div class="nav-home">
+				<a href="#" class="nav-link">
+					
+				</a>
+			</div>
+			<div class="nav-title">
+				登录
+			</div>
+		</div>
+		<div class="body">
+			<a id="me" href="#">哈哈哈</a>
+			<ul id="myul">
+				<li><a href="javascript:void(0)">111</a></li>
+				<li><a href="javascript:void(0)">222</a></li>
+				<li><a href="javascript:void(0)">333</a></li>
+			</ul>
+		</div>
+		<div class="foot">
+			
+		</div>
+		<script type="text/javascript">
+			/*if(!("a" in window)){
+				var a = 1;
+			}
+			alert(a);//undefined
+			*/
+			/*var a = 1,b = function a(x){
+				 x&&a(--x);
+			}
+			alert(a);//1*/
+			
+			/*function a(x){
+				return x * 2;
+			}
+			var a;
+			alert(a);*/
+			/*function b(x,y,a){
+				arguments[2] = 10;
+				alert(a);
+			}
+			b(1,2,3);//10
+			*/
+			function a(){
+				alert(this);
+			}
+			a.apply(this,{x:1});
+			
+		</script>
+	</body>
+</html>
