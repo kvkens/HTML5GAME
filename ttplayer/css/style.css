@@ -1,0 +1,92 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend{margin:0;padding:0;border:0;word-wrap:break-word;word-break:break-all}table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0}table{border-collapse:collapse}address,caption,cite,code,dfn,strong,th,var{font-style:normal}h1,h2,h3,h4,h5,h6{font-size:1em}input,textarea,select{font-family:inherit;font-weight:inherit;font-size:1em;padding:0;outline:none}ul,ol{list-style:none}em{font-style:normal}html{background:#f2f2f2}body{font-size:.75em;color:#606060;background:#f2f2f2;font-family:"微软雅黑", Verdana, Tahoma, Arial, Helvetica, "宋体", sans-serif;word-wrap:break-word;word-break:break-all}a{color:#606060;text-decoration:none}a:hover{color:#005aa9}a img,img{border-width:0}.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0}.clearfix{*zoom:1;clear:both}.txt_red{color:#F00}
+
+/*html,body{
+	background: url(../images/bg.jpg) center top ;
+	background-size: cover;
+}*/
+
+
+.container{
+	width:900px;
+	height: 600px;
+	margin:20px auto;
+	position: relative;
+	color:#FFF;
+}
+.banner{
+	height: 100px;
+	line-height: 100px;
+	background: #58A057;
+	color:#FFF;
+}
+.title{
+	font-size: 22px;
+	margin:0px 30px;
+}
+.main{
+	height: 500px;
+	
+}
+.list{
+	width:300px;
+	height: 500px;
+	background: #468E8B;
+	float: left;
+	overflow: auto;
+}
+.lrc{
+	width:600px;
+	height: 500px;
+	background: #96A52A;
+	float: right;
+	position: relative;
+}
+audio{
+	width:100%;
+}
+.player{
+	position: absolute;
+	bottom: 0px;
+	width:99.5%;
+}
+a{
+	color:#FFF;
+	transition: 0.2s ease-in-out;
+	-webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-ms-transition: 0.2s ease-in-out;
+}
+a:hover{
+	color:#B3170E;
+}
+ul.list-item{
+	list-style-type: decimal;
+}
+.list ul{
+	font-size:14px;
+}
+.list ul li{
+	margin:15px 30px;
+}
+.lrc{
+	overflow: hidden;
+}
+.lrc-list{
+	font-size: 18px;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	top:30px;
+}
+.lrc-list li{
+	margin: 10px;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+	-webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-ms-transition: 0.2s ease-in-out;
+}
+.lrc-list li.current{
+	color:#F34747;
+	text-shadow:0px 0px 3px;
+}
