@@ -1,7 +1,7 @@
 var Player = function(){
-	this.audio = document.querySelectorAll("#player");
-	this.songsList = document.querySelectorAll("#songsList");
-	this.lrcList = document.querySelectorAll("#lrcList");
+	this.audio = document.querySelector("#player");
+	this.songsList = document.querySelector("#songsList");
+	this.lrcList = document.querySelector("#lrcList");
 }
 Player.prototype = {
 	constructor : Player,
@@ -16,6 +16,7 @@ Player.prototype = {
 			if(xhttp.readyState==4 && xhttp.status == 200){
 				var obj = (JSON.parse(xhttp.responseText).data);
 				ctx.loadSongsHTML(obj);
+				ctx.bindEventList(ctx);
 			}
 		}
 		xhttp.send();
@@ -31,7 +32,27 @@ Player.prototype = {
 			li.appendChild(a);
 			documentframe.appendChild(li);
 		});
-		this.songsList[0].appendChild(documentframe);
+		this.songsList.appendChild(documentframe);
+		
+	},
+	bindEventList : function(ctx){
+		ctx.songsList.addEventListener("click",function(e){
+			
+			if(e.target.tagName.toLowerCase() !== "a"){
+				return;
+			}
+			var lrc = e.target.getAttribute("data-lrc");
+			//var name = e.target
+			console.log(e);
+			ctx.play({"lrc": lrc,"name":1});
+			
+		},false);
+	},
+	play : function(music){
+		var that = this;
+		that.audio.src= "./music/" + music.lrc + ".mp3"; 
+		that.audio.play();
+		console.log("开始唱"+music.name);
 	}
 }
 window.onload = function(){
